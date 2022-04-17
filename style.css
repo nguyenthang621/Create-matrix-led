@@ -1,0 +1,237 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background, #fff);
+}
+
+.container__table {
+  width: 500px;
+  height: 400px;
+  background-color: #bdbdbd;
+  position: relative;
+  right: -50%;
+  transform: translate(-50%);
+  top: 70px;
+  max-width: 1400px;
+  max-height: 680px;
+}
+.container__table .table__led {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.container__table .table__led tbody tr td {
+  border: 0.5px solid #575656;
+}
+
+.box__control {
+  background-color: #ccc;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--color-dark-fade, #aaaaaa);
+}
+.box__control .btn__convert {
+  width: 100px;
+  height: 50px;
+  border-radius: 24px;
+  background-color: var(--color-dark, black);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.box__control .btn__delete {
+  width: 100px;
+  height: 50px;
+  border-radius: 24px;
+  background-color: var(--color-dark, black);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.box__control .setting__matrix {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-dark, black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.box__control .setting__matrix i {
+  color: white;
+  font-size: 24px;
+}
+.box__control .setting__matrix .box__setting {
+  position: absolute;
+  top: 60px;
+  border-radius: 12px;
+  background-color: #ccc;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  width: 65px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box__control .setting__matrix .box__setting input {
+  width: 50px;
+  padding: 2px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+}
+.box__control .setting__matrix .box__setting .btn__done {
+  width: 50px;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: var(--color-dark, black);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box__control .switch {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  background-color: var(--color-dark, black);
+  border-radius: 20px;
+  box-shadow: 0 0 4px #4d4d4dc2;
+  transform: scale(1.2);
+  margin-right: 80px;
+  cursor: pointer;
+}
+.box__control .switch:hover {
+  opacity: 0.7;
+}
+.box__control .switch:active {
+  -webkit-transform: translateX(2px);
+  transform: translateX(2px);
+}
+.box__control .switch .bi {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 0px 2px;
+  top: 50%;
+  right: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translateY(-50%);
+  box-shadow: -1px 2px 4px 0 rgba(0, 35, 11, 0.2);
+  z-index: 1100;
+}
+.box__control .switch .icon {
+  font-size: 16px;
+}
+.box__control .switch .icon.sun {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 54%;
+  left: 0;
+  transform: translateY(-50%);
+  padding-left: 5px;
+  z-index: 1000;
+  color: #000;
+}
+.box__control .switch .icon.sun i {
+  width: 100%;
+  height: 100%;
+}
+.box__control .switch .icon.moon {
+  position: absolute;
+  top: 54%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 5px;
+  z-index: 1000;
+  color: #000;
+}
+.box__control .switch .icon.moon i {
+  width: 100%;
+  height: 100%;
+}
+
+.show__hex {
+  margin: 100px auto;
+  width: 70%;
+  height: 500px;
+  background-color: var(--color-dark, black);
+  border-radius: 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-y: scroll;
+  position: relative;
+}
+.show__hex::-webkit-scrollbar {
+  margin-top: 10px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  border-radius: 12px;
+  background-color: #aaa;
+}
+.show__hex::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 24px;
+  width: 2px;
+}
+.show__hex .title__result {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.show__hex .result {
+  position: absolute;
+  top: 10px;
+  padding: 5px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.show__hex .title__copy__done {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: normal;
+  color: green;
+}
+
+.bgc {
+  background-color: var(--color-dark, black);
+}
+
+.display_none {
+  display: none;
+}
+
+.hide {
+  height: 0 !important;
+}
+
+.slideBi {
+  left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

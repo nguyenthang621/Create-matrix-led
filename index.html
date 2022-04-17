@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Create data matrix</title>
+</head>
+<body>
+    <div class="container__table">
+        <table class="table__led">
+            <tbody class="body__table">
+                
+            </tbody>
+        </table>
+
+    </div>
+    <div class="box__control">
+        <div class="setting__matrix">
+            <i class="fa-solid fa-gear"></i>
+            <div class="box__setting">
+                <input class="row" type="number" placeholder="row" value="">
+                <input class="col" type="number" placeholder="col" value="">
+                <div class="btn__done">Done</div>
+            </div>
+        </div>
+        <button class="btn__delete">Delete</button>
+        <button class="btn__convert">convert</button>
+        <div class="navbar__control__btnLight switch">
+            <span class="icon sun"></span>
+            <span class="bi"></span>
+            <span class="icon moon"><i class="fa-solid fa-lightbulb-off"></i></span>   
+        </div>
+        <!-- <input type="color" class="btn__input__color"> -->
+    </div>
+
+    <div class="show__hex">
+        <div class="title__result">Result:</div>
+        <div class="result">
+            <!-- {123456781234567234567} -->
+        </div>
+        <div class="title__copy__done display_none">Copied</div>
+    </div>
+
+    <script src="testData.js"></script>
+</body>
+</html>
