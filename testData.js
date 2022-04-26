@@ -263,7 +263,7 @@ const appConvert = {
 
 // render:
    render:function(){
-      var chia=row/8;
+      var chia=col/8;
       boxResult.innerHTML = results.map(function(item,index){
          if ((index+1)%chia==0){
             return 'B'+item+'<br>'
