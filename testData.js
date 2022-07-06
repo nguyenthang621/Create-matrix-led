@@ -21,6 +21,7 @@ var results =[];
 var arraySquareActive=[];
 var sophantu=col*row/8;
 var squares;
+var x;
 
 
 const appConvert = {
@@ -44,6 +45,7 @@ const appConvert = {
          appConvert.convert();
          appConvert.render();
          appConvert.notCopied();
+         appConvert.renderReverse();
       }
 // button delete:
       btnDelete.onclick=()=>{
@@ -183,19 +185,19 @@ const appConvert = {
 // fun get id square actived:
 
    getIdSquareActive:function(){
-      console.log(sophantu);
+      // console.log(sophantu);
       var count=0;
       for (let i=0;i<sophantu;i++){
             for (let j=0;j<8;j++){
-               console.log(count);
+               // console.log(count);
                if(squares[count].className =="bgc"){
                   arraySquareActive[i].push(parseInt(squares[count].getAttribute("id-col")));
                }
                count+=1;
             }
       }
-      console.log(sophantu);
-      console.log(arraySquareActive);
+      // console.log(sophantu);
+      // console.log(arraySquareActive);
  
    },
 
@@ -264,7 +266,7 @@ const appConvert = {
 // render:
    render:function(){
       var chia=col/8;
-      boxResult.innerHTML = results.map(function(item,index){
+      x=results.map(function(item,index){
          if ((index+1)%chia==0){
             return 'B'+item+'<br>'
          }
@@ -272,6 +274,37 @@ const appConvert = {
             return 'B'+item
          }
       }).join(",")
+      boxResult.innerHTML = x
+   },
+
+//render reverse:
+   renderReverse:function(){
+      var chia=col/8;
+         var xReverse =results.map(function(item,index){
+            if ((index+1)%chia==0){
+               return item
+            }
+            else{
+               return item
+            }
+         })
+         var resultsx2=''
+        var x2 = xReverse.map((item,index)=>{
+            var a='';
+               for(var i=item.length-1;i>=0;--i){
+                     if(i==item.length-1){
+                        a+=`B`;
+                     }
+                     if(i==0){
+                        a+=`${item[i]},`
+                     }
+                     else{
+                        a+=item[i]
+                     }
+                  }
+                  resultsx2+=a;
+               })
+               alert(resultsx2)
    },
 
 
@@ -279,6 +312,7 @@ const appConvert = {
       appConvert.createArray();
       appConvert.createTable(row,col);
       appConvert.handleEvents(); 
+
    }
    
 }
