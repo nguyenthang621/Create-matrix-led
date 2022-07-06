@@ -305,6 +305,7 @@ const appConvert = {
                   resultsx2+=a;
                })
                alert(resultsx2)
+               console.log(resultsx2);
    },
 
 
